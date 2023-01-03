@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+
+}
+
+
+@font-face {
+
+    font-family: Love;
+    src: url('../font/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+
+@font-face {
+
+    font-family: Medieval;
+    src: url('../font/MedievalSharp/MedievalSharp-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+
+@font-face {
+
+    font-family: Rubik;
+    src: url('../font/Rubik_Wet_Paint/RubikWetPaint-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+$malva: #C46BD1;
+$malvaClaro: #FAD4FF;
+$azul: #202893;
+$blanco: #ffffff;
+$dorado: #D6A277;
+$negro: #000000;
+
+
+body {
+    background-image: url(../img/fondo-galaxia.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+// $column-count: 12;
+// @function column-width($num) {
+// @return $num * 100% / $column-count;
+// }
+
+// #three-columns {
+// width: column-width(3);
+// border: solid black 2px;
+// background-color: aquamarine;
+// }
+
+@mixin escudo1{
+    width: 13vw;
+    margin: 3em;
+}
+
+@mixin escudo2{
+    width: 7vw;
+    margin: 0.5em;
+}
+
+header {
+    width: auto;
+    margin: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    justify-content: space-evenly;
+    img{
+        @include escudo1;
+    }
+    h1{
+        font-family: Medieval;
+        color: $dorado;
+        margin-top: 15vh;
+        font-size: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        -webkit-text-stroke: 0.2px $negro;
+        text-shadow: 2px 2px 10px $negro;
+    }
+}
+
+// Footer
+
+#footer1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    color: white;
+    padding-bottom: 1em;
+    font-family: Love;
+    background-color: $azul;
+}
+  
+#enlaces{
+    margin-top: 1.5em;
+    text-align: left;
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+  
+#social {
+    text-align: center;
+    padding-top: 3em;
+    margin-right: 5em;
+    img{
+        width: 2em;
+    }
+} 
+
+#escudos {
+    width: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    margin-top: 1em;
+    img{
+        @include escudo2;
+    }
+}
+  
+#footer2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-self: center;
+    color: white;
+    font-family: 'Love';
+    padding: 0;
+    font-size: 14px;
+    background-color: $malva;
+    padding: 0.3em;
+}
+  
+#copyright {
+    margin-left: 2em;
+    p{
+        font-size: small;
+        color:white;
+    }
+}
+  
+#legal {
+    margin-left: 10em;
+    font-size: small;
+    a:hover{
+        border-bottom: white solid 3px;
+    }
+}
+  
+#politica, #privacidad, #cookies {
+    display:inline-block;
+    text-decoration: none;
+    color:white;
+    margin-left: 1em;
+}
