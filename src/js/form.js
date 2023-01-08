@@ -1,6 +1,7 @@
+import * as validate from './validate.js'
+
 let add = document.querySelector("#agregar")
 add.addEventListener("click", agregar);
-
 
 function p(y) {
     return document.getElementById(y);
@@ -11,7 +12,6 @@ function agregar(){
     var apellidos = p("inputApellidos").value;
     var curso = p("inputCurso").value;
     var fechaNac = p("inputNacimiento").value;
-    // var horoscopo = p("inputHoroscopo").value;
     var ciudad = p("inputCiudad").value;
     var pais = p("inputPais").value;
     var fecha=new Date(fechaNac);
@@ -19,13 +19,14 @@ function agregar(){
     var dia = fecha.getDate();
     var ano = fecha.getFullYear();
     var sign="";
+    
     console.log(fecha);
     console.log(mes);
     console.log(dia);
     console.log(ano);
 
     let nacimiento = `${dia}/${mes}/${ano}`;
-    console.log(nacimiento)
+    console.log(nacimiento);
 
     if ((mes===12 && dia>21) || (mes===1 && dia<=19)){
     sign="Capricornio";
@@ -56,37 +57,54 @@ function agregar(){
     }
     console.log(sign)
 
-
-    // validación de los datos introducidos en el formulario
-   
-    const pattern = new RegExp('^[a-zA-ZáÁéÉíÍóÓúÚñÑ\\s]*$', 'i');
-
-    if(nombre.length < 3  || !pattern.test(nombre)){
-        alert("Debes introducir un nombre con más de dos caracteres y sólo letras");
+    function validarAllInput(value){
+        if(validate.validarInput(value)){
+            return true;      
+        }else{
+        alert("Debes ingresar más de dos caracteres y sólo letras.");
+            return false;
+        };
     }
+    
+    if(!validarAllInput(inputNombre.value)){
+        p("inputNombre").focus();
+        return false;
+        }else{
+        nombre = p("inputNombre").value;
+        };
 
-    if(apellidos.length < 3  || !pattern.test(apellidos)){
-        alert("Debes introducir apellidos con más de dos caracteres y sólo letras");
+    if(!validarAllInput(inputApellidos.value)){
+        p("inputApellidos").focus();
+        return false;
+        }else{
+        apellidos = p("inputApellidos").value;
+        };
+    
+    if(!validarAllInput(inputCiudad.value)){
+        p("inputCiudad").focus();
+        return false;
+        }else{
+        ciudad = p("inputCiudad").value;
+        };
 
-    }
+    if(!validarAllInput(inputPais.value)){
+        p("inputPais").focus();
+        return false;
+        }else{
+        pais = p("inputPais").value;
+        };
+    
+    function validarAllSelect(value){
+        if(validate.validarSelect(value)){
+            return true;
+        }else{
+            alert("Debes seleccionar alguna apción.");
+            return false;
+        };
+    };
 
-    if( curso == "") {
-        p("inputCurso").focus();
-        alert("Debes introducir un curso");
-    }
-
-    if (nacimiento==""){
-		p("inputNacimiento").focus();
-        alert("Debes introducir una fecha de nacimiento");
-	}
-
-    if(ciudad.length < 3  || !pattern.test(ciudad)){
-        alert("Debes introducir la ciudad de origen con más de dos caracteres y sólo letras");
-    }
-
-    if(pais.length < 3  || !pattern.test(pais)){
-        alert("Debes introducir país de origen con más de dos caracteres y sólo letras");
-    }
+    validarAllSelect(curso);
+    validarAllSelect(fechaNac); 
 
     //creamos un objeto tr que anexamos a nuestra tabla
     let fila=document.createElement("tr");
@@ -144,3 +162,4 @@ function agregar(){
     }); 
 
 };
+
