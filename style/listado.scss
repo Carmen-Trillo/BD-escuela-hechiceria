@@ -3,7 +3,6 @@
 
 }
 
-
 @font-face {
 
     font-family: Love;
@@ -13,7 +12,6 @@
 
 }
 
-
 @font-face {
 
     font-family: Medieval;
@@ -22,7 +20,6 @@
     font-weight: normal;
 
 }
-
 
 @font-face {
 
@@ -39,24 +36,13 @@ $blanco: #ffffff;
 $dorado: #D6A277;
 $negro: #000000;
 
-
 body {
     background-image: url(../img/fondo-galaxia.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    text-align: center;
 }
-
-// $column-count: 12;
-// @function column-width($num) {
-// @return $num * 100% / $column-count;
-// }
-
-// #three-columns {
-// width: column-width(3);
-// border: solid black 2px;
-// background-color: aquamarine;
-// }
 
 @mixin escudo1{
     width: 13vw;
@@ -67,6 +53,22 @@ body {
     width: 7vw;
     margin: 0.5em;
 }
+
+@mixin button{
+    background-color: $malva;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+    border: solid 1px $malvaClaro;
+    border-radius: 5px;
+    padding: 8px;
+    width: 10vw;
+    align-items: center;
+    font-family: Love;
+}
+
+//Header
 
 header {
     width: auto;
@@ -88,6 +90,105 @@ header {
         -webkit-text-stroke: 0.2px $negro;
         text-shadow: 2px 2px 10px $negro;
     }
+}
+
+// Main
+
+main {
+    font-family: Love;
+}
+
+form {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: solid 2px $malva;
+    background-color: $malvaClaro;
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 25em;
+    margin:auto;
+    padding-left: 1em;
+}
+
+label {
+    height: 2em;
+    width: 7em;
+    vertical-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 0.6em;
+    border-radius: 10px;
+    background-color: #C46BD1;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+input {
+    height: 2.1em;
+    padding-top: 0.5em;
+    text-align: left;
+    padding-left: 0.5em;
+	margin-right: 10px;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    width: 17em;
+    font-family: Love;
+}
+
+select {
+    height: 3em;
+    padding-top: 0.5em;
+	margin-right: 10px;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border: 2px solid $negro;
+    width: 18em;
+    font-family: Love;
+    text-align: left;
+    padding-left: 0.5em;
+}
+
+#inputNacimiento {
+    width: 17.4em;
+    text-align: left;
+    padding-left: 0.5em;
+    height: 2.2em;
+}
+
+#agregar {
+    @include button;
+}
+
+table {
+	width:900px;
+    margin: auto;
+    border: 1px solid ;
+    margin-bottom: 10em;
+    background-color: $malvaClaro;
+    opacity: 0.8;
+}
+
+th {
+	text-align:center;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: $malva;
+    color: white;
+    width: auto;
+}
+
+#eliminar {
+    @include button;
+    padding: 3px;
+}
+
+#cargar, #guardar{
+    @include button;
+    width: 8em;
+    margin-bottom: 2em;
 }
 
 // Footer
