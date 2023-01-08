@@ -40,7 +40,7 @@ function agregar(){
     } else if ((mes===5 && dia>20) || (mes===6 && dia<=20)){
     sign="Geminis";
     } else if ((mes===6 && dia>20) || (mes===7 && dia<=22)){
-    sign="Cáncer";
+    sign="Cancer";
     } else if ((mes===7 && dia>22) || (mes===8 && dia<=22)){
     sign="Leo";
     } else if ((mes===8 && dia>22) || (mes===9 && dia<=22)){
@@ -108,7 +108,8 @@ function agregar(){
     let celda7= document.createElement("td");
     let celda8= document.createElement("td");
     let deleteButton = document.createElement('button');
-
+    let celda9= document.createElement("td")
+    let editButton = document.createElement('button');
     //asignamos los valores a nuestros td por medio del atributo innerHTML
     celda1.innerHTML=nombre;
     celda2.innerHTML=apellidos;
@@ -119,6 +120,7 @@ function agregar(){
     celda7.innerHTML=pais;
     deleteButton.textContent="Eliminar"
     deleteButton.setAttribute('id','eliminar');
+
     // celda8.innerHTML="<input type='button' id='eliminar' value='Eliminar'>";
 
 // onclick='eliminar()
@@ -161,9 +163,72 @@ function agregar(){
     //     let filaABorrar= target.parentNode.parentNode.remove()
     //     p("tablaDatos").removeChild(filaABorrar);
     // }
-}
+    // let add = document.querySelector("#agregar")
+    
+
+};
+
+// let edit = document.querySelector("#editar")
+// edit.addEventListener("click", editar);
+
+// function editar() {
+//         let fila=parseInt(prompt("Indique la fila que desea modificar"));
+//         let columna=parseInt(prompt("Indique la columna que desea modificar"));
+//         console.log(fila);
+//         console.log(columna);
+
+//         let celdas = document.getElementById("tablaDatos").rows[fila].cells[columna-1];
+//         celdas.innerHTML=prompt("Introduzca un nuevo valor. Si modifica la fecha, el formato debe ser AAAA/M/DD");
 
 
+//         var nuevaFecha = document.getElementById("tablaDatos").rows[fila].cells[3];
+//         console.log(nuevaFecha);
+
+//         var fechaEdit= new Date(nuevaFecha);
+        
+//         // var mesEdit = fechaEdit.getMonth() + 1;
+//         // var diaEdit = fechaEdit.getDate();
+//         // console.log(mesEdit);
+//         // console.log(diaEdit);
+//         console.log(fechaEdit);
+
+//         // if ((mesEdit===12 && diaEdit>21) || (mesEdit===1 && diaEdit<=19)){
+//         //     sign="Capricornio";
+//         //     } else if ((mesEdit===1 && diaEdit>19) || (mesEdit===2 && diaEdit<=18)){
+//         //     sign="Acuario";
+//         //     } else if ((mesEdit===2 && diaEdit>18) || (mesEdit===3 && diaEdit<=20)){
+//         //     sign="Piscis";
+//         //     } else if ((mesEdit===3 && diaEdit>20) || (mesEdit===4 && diaEdit<=19)){
+//         //     sign="Aries";
+//         //     } else if ((mesEdit===4 && diaEdit>19) || (mesEdit===5 && diaEdit<=20)){
+//         //     sign="Tauro";
+//         //     } else if ((mesEdit===5 && diaEdit>20) || (mesEdit===6 && diaEdit<=20)){
+//         //     sign="Geminis";
+//         //     } else if ((mesEdit===6 && diaEdit>20) || (mesEdit===7 && diaEdit<=22)){
+//         //     sign="Cáncer";
+//         //     } else if ((mesEdit===7 && diaEdit>22) || (mesEdit===8 && diaEdit<=22)){
+//         //     sign="Leo";
+//         //     } else if ((mesEdit===8 && diaEdit>22) || (mesEdit===9 && diaEdit<=22)){
+//         //     sign="Virgo";
+//         //     } else if ((mesEdit===9 && diaEdit>22) || (mesEdit===10 && diaEdit<=22)){
+//         //     sign="Libra";
+//         //     } else if ((mesEdit===10 && dia>22) || (mesEdit===11 && diaEdit<=21)){
+//         //     sign="Escorpio";
+//         //     } else if ((mesEdit===11 && dia>21) || (mesEdit===12 && diaEdit<=21)){
+//         //         sign="Sagitario";
+//         //     } else {
+//         //     return alert("Debes introducir un valor válido");
+//         //     }
+//         //     console.log(sign)
+
+//         // var nuevoSign = document.getElementById("tablaDatos").rows[fila].cells[4];
+//         // nuevoSign.innerHTML=sign;
+//         // console.log(nuevoSign);
+    
+//         // let celda=getElementById('tablaDatos').rows[fila-1].cells;
+//         // celda[columna-1].innerHTML=prompt("Introduzca un nuevo valor");
+//         // tabla.rows[4].cells[1].innerHTML
+//     };
 
 
 // function eliminar(nodoBoton){

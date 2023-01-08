@@ -160,9 +160,11 @@ th {
   align-items: center;
   font-family: Love;
   padding: 3px;
+  width: 5em;
+  font-size: small;
 }
 
-#cargar, #guardar {
+#editar, #cargar, #guardar {
   background-color: #C46BD1;
   font-size: large;
   text-align: center;
