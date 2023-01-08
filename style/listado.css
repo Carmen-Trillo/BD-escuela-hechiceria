@@ -28,233 +28,466 @@ body {
   text-align: center;
 }
 
-header {
-  width: auto;
-  margin: auto;
-  align-content: center;
-  display: grid;
-  grid-template-columns: 1fr 2.5fr 1fr;
-  justify-content: space-evenly;
+@media (min-width: 700px) {
+  header {
+    width: auto;
+    margin: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    justify-content: space-evenly;
+  }
+  header img {
+    width: 13vw;
+    margin: 3em;
+  }
+  header h1 {
+    font-family: Medieval;
+    color: #D6A277;
+    margin-top: 15vh;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-text-stroke: 0.2px #000000;
+    text-shadow: 2px 2px 10px #000000;
+  }
 }
-header img {
-  width: 13vw;
-  margin: 3em;
+@media (min-width: 320px) and (max-width: 760px) {
+  header {
+    width: auto;
+    margin: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    margin-bottom: 2em;
+  }
+  header img {
+    width: 6em;
+    margin-top: 2em;
+  }
+  header h1 {
+    font-family: Medieval;
+    color: #D6A277;
+    margin-top: 5vh;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-text-stroke: 0.2px #000000;
+    text-shadow: 2px 2px 10px #000000;
+    align-items: center;
+  }
 }
-header h1 {
-  font-family: Medieval;
-  color: #D6A277;
-  margin-top: 15vh;
-  font-size: 50px;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-text-stroke: 0.2px #000000;
-  text-shadow: 2px 2px 10px #000000;
-}
-
 main {
   font-family: Love;
 }
 
-form {
-  text-align: left;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  border: solid 2px #C46BD1;
-  background-color: #FAD4FF;
-  opacity: 0.8;
-  border-radius: 10px;
-  width: 25em;
-  margin: auto;
-  padding-left: 1em;
+@media (min-width: 700px) {
+  form {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: solid 2px #C46BD1;
+    background-color: #FAD4FF;
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 25em;
+    margin: auto;
+    padding-left: 1em;
+  }
+  label {
+    height: 2em;
+    width: 7em;
+    vertical-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 0.6em;
+    border-radius: 10px;
+    background-color: #C46BD1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  input {
+    height: 2.1em;
+    padding-top: 0.5em;
+    text-align: left;
+    padding-left: 0.5em;
+    margin-right: 10px;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    width: 17em;
+    font-family: Love;
+  }
+  select {
+    height: 3em;
+    padding-top: 0.5em;
+    margin-right: 10px;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    width: 18em;
+    font-family: Love;
+    text-align: left;
+    padding-left: 0.5em;
+  }
+  #inputNacimiento {
+    width: 17.4em;
+    text-align: left;
+    padding-left: 0.5em;
+    height: 2.2em;
+  }
+  #agregar {
+    background-color: #C46BD1;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: solid 1px #FAD4FF;
+    border-radius: 5px;
+    padding: 8px;
+    width: 10vw;
+    align-items: center;
+    font-family: Love;
+    font-weight: bold;
+  }
+  table {
+    width: 900px;
+    margin: auto;
+    border: 1px solid;
+    margin-bottom: 10em;
+    background-color: #FAD4FF;
+    opacity: 0.8;
+  }
+  th {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: #C46BD1;
+    color: white;
+    width: auto;
+  }
+  tr {
+    text-align: center;
+    text-transform: capitalize;
+  }
+  #eliminar {
+    background-color: #C46BD1;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: solid 1px #FAD4FF;
+    border-radius: 5px;
+    padding: 8px;
+    width: 10vw;
+    align-items: center;
+    font-family: Love;
+    font-weight: bold;
+    padding: 3px;
+    width: 5em;
+    font-size: small;
+  }
+  #editar, #cargar, #guardar {
+    background-color: #C46BD1;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: solid 1px #FAD4FF;
+    border-radius: 5px;
+    padding: 8px;
+    width: 10vw;
+    align-items: center;
+    font-family: Love;
+    font-weight: bold;
+    width: 8em;
+    margin-bottom: 2em;
+  }
 }
-
-label {
-  height: 2em;
-  width: 7em;
-  vertical-align: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 0.6em;
-  border-radius: 10px;
-  background-color: #C46BD1;
-  text-transform: uppercase;
-  text-align: center;
+@media (min-width: 320px) and (max-width: 760px) {
+  form {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: solid 2px #C46BD1;
+    background-color: #FAD4FF;
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 20em;
+    margin: auto;
+    padding-left: 1em;
+  }
+  label {
+    height: 1.8em;
+    width: 6em;
+    vertical-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+    padding: 0.3em;
+    padding-top: 0.8em;
+    border-radius: 10px;
+    background-color: #C46BD1;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  input {
+    height: 2.1em;
+    padding-top: 0.5em;
+    text-align: left;
+    padding-left: 0.5em;
+    margin-right: 10px;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    width: 15em;
+    font-family: Love;
+  }
+  select {
+    height: 3em;
+    padding-top: 0.5em;
+    margin-right: 10px;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    width: 16em;
+    font-family: Love;
+    text-align: left;
+    padding-left: 0.5em;
+  }
+  #inputNacimiento {
+    width: 15.2em;
+    text-align: left;
+    padding-left: 0.5em;
+    height: 2.2em;
+  }
+  #agregar {
+    background-color: #C46BD1;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: solid 1px #FAD4FF;
+    border-radius: 5px;
+    padding: 8px;
+    width: 10vw;
+    align-items: center;
+    font-family: Love;
+    font-weight: bold;
+    width: 6em;
+    margin-bottom: 1em;
+    font-size: 12px;
+    padding-bottom: 1.8em;
+  }
+  table {
+    width: 18em;
+    margin: auto;
+    border: 1px solid;
+    margin-bottom: 10em;
+    background-color: #FAD4FF;
+    opacity: 0.8;
+  }
+  th {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    background-color: #C46BD1;
+    color: white;
+    width: auto;
+    padding: 0.3em;
+  }
+  tr {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 10px;
+  }
+  #eliminar {
+    background-color: #C46BD1;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: solid 1px #FAD4FF;
+    border-radius: 5px;
+    padding: 8px;
+    width: 10vw;
+    align-items: center;
+    font-family: Love;
+    font-weight: bold;
+    padding: 2px;
+    width: 5em;
+    font-size: 8px;
+  }
+  #editar, #cargar, #guardar {
+    background-color: #C46BD1;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: solid 1px #FAD4FF;
+    border-radius: 5px;
+    padding: 8px;
+    width: 10vw;
+    align-items: center;
+    font-family: Love;
+    font-weight: bold;
+    width: 8em;
+    margin-bottom: 1em;
+    font-size: 12px;
+    padding-bottom: 1.8em;
+  }
 }
-
-input {
-  height: 2.1em;
-  padding-top: 0.5em;
-  text-align: left;
-  padding-left: 0.5em;
-  margin-right: 10px;
-  margin-top: 1.2em;
-  margin-bottom: 1em;
-  border-radius: 10px;
-  width: 17em;
-  font-family: Love;
+@media (min-width: 700px) {
+  #footer1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    color: white;
+    padding-bottom: 1em;
+    font-family: Love;
+    background-color: #202893;
+  }
+  #enlaces {
+    margin-top: 1.5em;
+    text-align: left;
+  }
+  #enlaces li {
+    list-style: none;
+  }
+  #enlaces a {
+    text-decoration: none;
+    color: white;
+  }
+  #enlaces a:hover {
+    border-bottom: white solid 2px;
+  }
+  #social {
+    text-align: center;
+    padding-top: 3em;
+    margin-right: 5em;
+  }
+  #social img {
+    width: 2em;
+  }
+  #escudos {
+    width: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    margin-top: 1em;
+  }
+  #escudos img {
+    width: 7vw;
+    margin: 0.5em;
+  }
+  #footer2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-self: center;
+    color: white;
+    font-family: "Love";
+    padding: 0;
+    font-size: 14px;
+    background-color: #C46BD1;
+    padding: 0.3em;
+  }
+  #copyright {
+    margin-left: 2em;
+  }
+  #copyright p {
+    font-size: small;
+    color: white;
+  }
+  #legal {
+    margin-left: 10em;
+    font-size: small;
+  }
+  #legal a:hover {
+    border-bottom: white solid 2px;
+  }
+  #politica, #privacidad, #cookies {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin-left: 1em;
+  }
 }
-
-select {
-  height: 3em;
-  padding-top: 0.5em;
-  margin-right: 10px;
-  margin-top: 1.2em;
-  margin-bottom: 1em;
-  border-radius: 10px;
-  border: 2px solid #000000;
-  width: 18em;
-  font-family: Love;
-  text-align: left;
-  padding-left: 0.5em;
-}
-
-#inputNacimiento {
-  width: 17.4em;
-  text-align: left;
-  padding-left: 0.5em;
-  height: 2.2em;
-}
-
-#agregar {
-  background-color: #C46BD1;
-  font-size: large;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  border: solid 1px #FAD4FF;
-  border-radius: 5px;
-  padding: 8px;
-  width: 10vw;
-  align-items: center;
-  font-family: Love;
-}
-
-table {
-  width: 900px;
-  margin: auto;
-  border: 1px solid;
-  margin-bottom: 10em;
-  background-color: #FAD4FF;
-  opacity: 0.8;
-}
-
-th {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 400;
-  background-color: #C46BD1;
-  color: white;
-  width: auto;
-}
-
-#eliminar {
-  background-color: #C46BD1;
-  font-size: large;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  border: solid 1px #FAD4FF;
-  border-radius: 5px;
-  padding: 8px;
-  width: 10vw;
-  align-items: center;
-  font-family: Love;
-  padding: 3px;
-  width: 5em;
-  font-size: small;
-}
-
-#editar, #cargar, #guardar {
-  background-color: #C46BD1;
-  font-size: large;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  border: solid 1px #FAD4FF;
-  border-radius: 5px;
-  padding: 8px;
-  width: 10vw;
-  align-items: center;
-  font-family: Love;
-  width: 8em;
-  margin-bottom: 2em;
-}
-
-#footer1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  color: white;
-  padding-bottom: 1em;
-  font-family: Love;
-  background-color: #202893;
-}
-
-#enlaces {
-  margin-top: 1.5em;
-  text-align: left;
-}
-#enlaces li {
-  list-style: none;
-}
-#enlaces a {
-  text-decoration: none;
-  color: white;
-}
-
-#social {
-  text-align: center;
-  padding-top: 3em;
-  margin-right: 5em;
-}
-#social img {
-  width: 2em;
-}
-
-#escudos {
-  width: 4em;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: flex-end;
-  margin-top: 1em;
-}
-#escudos img {
-  width: 7vw;
-  margin: 0.5em;
-}
-
-#footer2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  align-self: center;
-  color: white;
-  font-family: "Love";
-  padding: 0;
-  font-size: 14px;
-  background-color: #C46BD1;
-  padding: 0.3em;
-}
-
-#copyright {
-  margin-left: 2em;
-}
-#copyright p {
-  font-size: small;
-  color: white;
-}
-
-#legal {
-  margin-left: 10em;
-  font-size: small;
-}
-#legal a:hover {
-  border-bottom: white solid 3px;
-}
-
-#politica, #privacidad, #cookies {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  margin-left: 1em;
+@media (min-width: 320px) and (max-width: 760px) {
+  #footer1 {
+    color: white;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    font-family: Love;
+    background-color: #202893;
+  }
+  #enlaces {
+    text-align: center;
+    margin-top: 1.5em;
+    text-align: left;
+  }
+  #enlaces li {
+    text-align: center;
+    list-style: none;
+    margin-right: 2em;
+  }
+  #enlaces a {
+    text-decoration: none;
+    color: white;
+  }
+  #enlaces a:hover {
+    border-bottom: white solid 1px;
+  }
+  #social {
+    text-align: center;
+    padding-top: 3em;
+    text-align: center;
+  }
+  #social img {
+    width: 2em;
+  }
+  #escudos {
+    margin-top: 1em;
+  }
+  #escudos img {
+    width: 7vw;
+    margin: 0.5em;
+    width: 5em;
+  }
+  #footer2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+    color: white;
+    font-family: "Love";
+    padding: 0;
+    font-size: 12px;
+    background-color: #C46BD1;
+    padding: 0.3em;
+  }
+  #copyright {
+    margin-left: 1em;
+  }
+  #copyright p {
+    font-size: 12px;
+    color: white;
+    margin-top: 0.8em;
+  }
+  #legal {
+    font-size: 12px;
+  }
+  #legal a:hover {
+    border-bottom: white solid 1px;
+  }
+  #politica, #privacidad, #cookies {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin-left: 1em;
+  }
 }/*# sourceMappingURL=listado.css.map */
