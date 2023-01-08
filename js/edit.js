@@ -5,6 +5,7 @@ function editar() {
     let fila=parseInt(prompt("Indique la fila que desea modificar"));
     let columna=parseInt(prompt("Indique la columna que desea modificar"));
     let celdas="";
+    let celda2="";
     console.log(fila);
     console.log(columna);
 
@@ -16,6 +17,7 @@ function editar() {
         console.log(editFecha);
         var mesEdit = editFecha.getMonth() + 1;
         var diaEdit = editFecha.getDate();
+        var anoEdit = editFecha.getFullYear();
         var newSign="";
 
         console.log(mesEdit);
@@ -49,8 +51,15 @@ function editar() {
         return alert("Debes introducir un valor válido");
         }
         console.log(newSign);
-        celdas = document.getElementById("tablaDatos").rows[fila].cells[4];
-        celdas.innerHTML=newSign;
+        
+        celda2 = document.getElementById("tablaDatos").rows[fila].cells[4];
+        celda2.innerHTML=newSign;
+
+        let formatFecha= `${diaEdit}/${mesEdit}/${anoEdit}`;
+        celdas = document.getElementById("tablaDatos").rows[fila].cells[3];
+        celdas.innerHTML=formatFecha;
+
+        
 
         } else {
             celdas = document.getElementById("tablaDatos").rows[fila].cells[columna-1];
