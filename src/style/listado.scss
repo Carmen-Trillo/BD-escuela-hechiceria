@@ -36,13 +36,7 @@ $blanco: #ffffff;
 $dorado: #D6A277;
 $negro: #000000;
 
-body {
-    background-image: url(../img/fondo-galaxia.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    text-align: center;
-}
+
 
 @mixin escudo1{
     width: 13vw;
@@ -67,6 +61,14 @@ body {
     align-items: center;
     font-family: Love;
     font-weight: bold;
+}
+
+body {
+    background-image: url(../img/fondo-galaxia.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    text-align: center;
 }
 
 //Header
