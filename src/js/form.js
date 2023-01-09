@@ -1,4 +1,5 @@
 import * as validate from './validate.js'
+import { addBaseDatos } from './date.js';
 
 let add = document.querySelector("#agregar")
 add.addEventListener("click", agregar);
@@ -19,6 +20,8 @@ function agregar(){
     var dia = fecha.getDate();
     var ano = fecha.getFullYear();
     var sign="";
+
+    
     
     console.log(fecha);
     console.log(mes);
@@ -104,7 +107,9 @@ function agregar(){
     };
 
     validarAllSelect(curso);
-    validarAllSelect(fechaNac); 
+    validarAllSelect(fechaNac);
+    
+    addBaseDatos();
 
     //creamos un objeto tr que anexamos a nuestra tabla
     let fila=document.createElement("tr");
@@ -156,10 +161,11 @@ function agregar(){
     p("inputPais").value="";
     // p("inputNombre").focus();
 
+    
+
 
     deleteButton.addEventListener("click", (event) => {
         event.target.parentNode.parentNode.remove()
     }); 
 
 };
-

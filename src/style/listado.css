@@ -189,7 +189,7 @@ main {
     width: 5em;
     font-size: small;
   }
-  #editar, #cargar, #guardar {
+  #editar, #cargar, #guardar, #estadisticas {
     background-color: #C46BD1;
     font-size: large;
     text-align: center;

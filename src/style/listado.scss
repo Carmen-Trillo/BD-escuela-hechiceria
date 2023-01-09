@@ -227,7 +227,7 @@ main {
         font-size: small;
     }
     
-    #editar, #cargar, #guardar{
+    #editar, #cargar, #guardar, #estadisticas {
         @include button;
         width: 8em;
         margin-bottom: 2em;
