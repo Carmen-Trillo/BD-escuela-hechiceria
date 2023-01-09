@@ -1,0 +1,190 @@
+@font-face {
+
+    font-family: Love;
+    src: url('../font/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+@font-face {
+    font-family: Medieval;
+    src: url(./fonts/MedievalSharp-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(./fonts/RubikWetPaint-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+$malva: #C46BD1;
+$malvaClaro: #FAD4FF;
+$azul: #202893;
+$blanco: #ffffff;
+$dorado: #D6A277;
+$negro: #000000;
+
+@mixin button{
+    background-color: $malva;
+    font-size: large;
+    text-align: center;
+    text-transform: uppercase;
+    color:white;
+    border: solid 1px $malvaClaro;
+    border-radius: 5px;
+    padding: 8px;
+    width: 10vw;
+    align-items: center;
+    font-family: Love;
+    font-weight: bold;
+}
+
+section {
+    padding-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/fondo-galaxia.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+#bigButton, #playBtn, #alumnos {
+    @include button;
+    margin-bottom: 5em;
+    a {
+    color: white;
+    text-decoration: none;
+    }
+}
+
+img {
+    width: 31.25rem;
+    display: flex;
+
+
+}
+
+@keyframes mymove {
+    0% {
+        top: 0px;
+        left: 0px;
+        ;
+    }
+
+    25% {
+        top: 0px;
+        left: 100px;
+    }
+
+    50% {
+        top: 100px;
+        left: 100px;
+        ;
+    }
+
+    75% {
+        top: 100px;
+        left: 0px;
+        ;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        ;
+    }
+}
+
+h1 {
+    color: white;
+    font-family: "Medieval";
+    font-size: xx-large;
+    position: relative;
+    left: -150px;
+    
+    /*animation: mymove 5s infinite;*/
+
+}
+
+@media (min-width: 900px) {
+    #repeat {
+        margin-top: 3rem;
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        animation: mymove 3s infinite;
+    }
+}
+
+
+@keyframes mymove {
+    0% {
+        top: 0px;
+        left: 0px;
+        ;
+    }
+
+    25% {
+        top: 0px;
+        left: 100px;
+    }
+
+    50% {
+        top: 100px;
+        left: 100px;
+        ;
+    }
+
+    75% {
+        top: 100px;
+        left: 0px;
+        ;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        ;
+    }
+}
+
+h2 {
+    font-family: "Medieval";
+    color: white;
+}
+
+/*media queries for tablets*/
+@media (max-width: 900px) {
+
+    h1,
+    h2 {
+        text-align: center;
+        position: static;
+    }
+    #playBtn{
+        
+        bottom:100px;
+        position: relative;
+        
+    }
+
+    #playBtn{
+       
+        margin-bottom: 1.25rem;
+        
+    }
+
+}
